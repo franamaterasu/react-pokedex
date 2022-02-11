@@ -1,0 +1,16 @@
+.header {
+  background-color: #fb1b1b;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__logo {
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    font-size: 39px;
+  }
+}
