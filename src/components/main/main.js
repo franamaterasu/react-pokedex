@@ -6,11 +6,7 @@ const Main = ({ pokemons }) => {
   return (
     <main className="main-container">
       {pokemons.map((pokemon, index) => {
-        return (
-          <article class="item">
-            <Card key={index} pokemon={pokemon} />
-          </article>
-        );
+        return <Card key={index} pokemon={pokemon} />;
       })}
     </main>
   );

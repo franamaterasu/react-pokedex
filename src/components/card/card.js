@@ -1,8 +1,10 @@
 const Card = ({ pokemon }) => {
-  const { name } = pokemon;
+  const item = pokemon[0];
+
   return (
     <article className="card">
-      <p>{name}</p>
+      <img src={item.sprites.front_default} alt={item.name} />
+      <h3>{item.name}</h3>
     </article>
   );
 };
