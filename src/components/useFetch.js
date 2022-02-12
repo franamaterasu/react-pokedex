@@ -19,7 +19,7 @@ const useFetch = () => {
       });
     setTimeout(() => {
       setPokemons(pokemonList);
-    }, 1000);
+    }, 2000);
   }, [offset]);
 
   const showNexts = () => {
