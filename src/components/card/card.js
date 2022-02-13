@@ -1,7 +1,13 @@
 import { CgClipboard, CgPokemon } from "react-icons/cg";
 import "./card.scss";
 
-const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
+const Card = ({
+  pokemon,
+  setSelectedPokemon,
+  setShowModal,
+  setHuntedList,
+  huntedList,
+}) => {
   const item = pokemon[0];
 
   const handleClickSelectedPokemon = (item) => {
@@ -9,7 +15,9 @@ const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
     setShowModal(true);
   };
 
-  console.log(item);
+  const handleClickHuntedPokemon = (item) => {
+    setHuntedList([...huntedList, item]);
+  };
 
   return (
     <article className="card">
@@ -26,7 +34,10 @@ const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
           >
             <CgClipboard className="card__button-icon" />
           </button>
-          <button className="card__button">
+          <button
+            onClick={() => handleClickHuntedPokemon(item)}
+            className="card__button"
+          >
             <CgPokemon className="card__button-icon" />
           </button>
         </section>

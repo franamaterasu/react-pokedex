@@ -10,11 +10,12 @@ import Loader from "./components/loader";
 const App = () => {
   const [selectedPokemon, setSelectedPokemon] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [huntedList, setHuntedList] = useState([]);
   const { pokemons, showNexts, showPrevious, offset } = useFetch();
 
   return (
     <>
-      <Header />
+      <Header huntedList={huntedList} />
       {pokemons.length < 1 ? (
         <Loader />
       ) : (
@@ -23,6 +24,8 @@ const App = () => {
             pokemons={pokemons}
             setSelectedPokemon={setSelectedPokemon}
             setShowModal={setShowModal}
+            huntedList={huntedList}
+            setHuntedList={setHuntedList}
           />
           <Pagination
             showNexts={showNexts}

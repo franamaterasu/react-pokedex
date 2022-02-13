@@ -1,15 +1,33 @@
 .header {
   background-color: #fb1b1b;
-  padding: 15px 20px;
+  padding: 15px 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  justify-content: space-between;
 
   &__logo {
     font-family: 'Bebas Neue', cursive;
     color: #fff;
     font-size: 39px;
+  }
+
+  &__counter {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px 25px;
+  }
+
+  &__counter-icon {
+    font-size: 33px;
+    margin-right: 5px;
+  }
+
+  &__counter-number {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
   }
 }
