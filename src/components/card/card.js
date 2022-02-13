@@ -1,3 +1,4 @@
+import { CgClipboard, CgPokemon } from "react-icons/cg";
 import "./card.scss";
 
 const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
@@ -11,13 +12,24 @@ const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
   console.log(item);
 
   return (
-    <article className="card" onClick={() => handleClickSelectedPokemon(item)}>
+    <article className="card">
       <div className="card__container">
         <img
           className="card__image"
           src={item.sprites.other.home.front_default}
           alt={item.name}
         />
+        <section className="card__nav">
+          <button
+            onClick={() => handleClickSelectedPokemon(item)}
+            className="card__button"
+          >
+            <CgClipboard className="card__button-icon" />
+          </button>
+          <button className="card__button">
+            <CgPokemon className="card__button-icon" />
+          </button>
+        </section>
         <div className="card__info">
           <p className="card__text">
             #{item.order} <span className="card__text--bold">{item.name}</span>
