@@ -29,12 +29,14 @@ const Card = ({
         />
         <section className="card__nav">
           <button
+            title="Watch pokemon details"
             onClick={() => handleClickSelectedPokemon(item)}
             className="card__button"
           >
             <CgClipboard className="card__button-icon" />
           </button>
           <button
+            title="Catch pokemon"
             onClick={() => handleClickHuntedPokemon(item)}
             className="card__button"
           >
