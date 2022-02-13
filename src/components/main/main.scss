@@ -1,6 +1,10 @@
 .main-container {
+  align-items: center;
   background-color: #fff;
-  padding: 60px 30px;
-  margin-top: 69px;
   box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 60px 0;
 }
