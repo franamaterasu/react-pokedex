@@ -18,7 +18,16 @@ const Card = ({ pokemon, setSelectedPokemon, setShowModal }) => {
           src={item.sprites.other.home.front_default}
           alt={item.name}
         />
-        <h3 className="card__title">{item.name}</h3>
+        <div className="card__info">
+          <p className="card__text">
+            #{item.order} <span className="card__text--bold">{item.name}</span>
+          </p>
+          <ul className="card__list">
+            {item.types.map((type) => {
+              return <li className="card__list-item">{type.type.name}</li>;
+            })}
+          </ul>
+        </div>
       </div>
     </article>
   );
