@@ -4,11 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
   width: 100%;
   box-sizing: border-box;
-  z-index: 2;
 
   &__logo {
     font-family: 'Bebas Neue', cursive;
