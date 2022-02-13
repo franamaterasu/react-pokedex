@@ -1,10 +1,14 @@
-import { CgChevronLeftR } from "react-icons/cg";
+import { CgChevronLeftR, CgPokemon } from "react-icons/cg";
 import "./modal.scss";
 
-const Modal = ({ selectedPokemon, setShowModal }) => {
+const Modal = ({ selectedPokemon, setShowModal, huntedList }) => {
   const handleClickCloseModal = () => {
     setShowModal(false);
   };
+
+  const pokemonHaunted = huntedList.some(
+    (item) => item.name === selectedPokemon.name
+  );
 
   return (
     <section className="modal">
@@ -15,7 +19,10 @@ const Modal = ({ selectedPokemon, setShowModal }) => {
           src={selectedPokemon.sprites.other.home.front_default}
         />
         <section className="modal__info">
-          <p className="modal__name">{selectedPokemon.name}</p>
+          <p className="modal__name">
+            {selectedPokemon.name}{" "}
+            {pokemonHaunted && <CgPokemon className="modal__name-icon" />}
+          </p>
           <p className="modal__section-title">Habilidades:</p>
           <ul className="modal__section-list">
             {selectedPokemon.abilities.map((habilidad) => {

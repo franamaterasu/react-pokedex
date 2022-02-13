@@ -13,6 +13,8 @@ const App = () => {
   const [huntedList, setHuntedList] = useState([]);
   const { pokemons, showNexts, showPrevious, offset } = useFetch();
 
+  console.log(huntedList);
+
   return (
     <>
       <Header huntedList={huntedList} />
@@ -35,7 +37,11 @@ const App = () => {
         </>
       )}
       {showModal && (
-        <Modal selectedPokemon={selectedPokemon} setShowModal={setShowModal} />
+        <Modal
+          selectedPokemon={selectedPokemon}
+          setShowModal={setShowModal}
+          huntedList={huntedList}
+        />
       )}
     </>
   );
