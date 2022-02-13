@@ -11,12 +11,13 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
+    "testcafe": "^1.18.3",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "testcafe": "testcafe \"chrome '--window-size=1920,1080'\" ./src/tests/*.test.js -e -q --page-load-timeout 120000",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

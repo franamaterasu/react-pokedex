@@ -31,14 +31,14 @@ const Card = ({
           <button
             title="Watch pokemon details"
             onClick={() => handleClickSelectedPokemon(item)}
-            className="card__button"
+            className="card__button card__button--detail"
           >
             <CgClipboard className="card__button-icon" />
           </button>
           <button
             title="Catch pokemon"
             onClick={() => handleClickHuntedPokemon(item)}
-            className="card__button"
+            className="card__button card__button--add-list"
           >
             <CgPokemon className="card__button-icon" />
           </button>
