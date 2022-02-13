@@ -1,0 +1,27 @@
+.pagination {
+  text-align: center;
+
+  &__button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    outline: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-of-type {
+      margin-right: 15px;
+    }
+  }
+
+
+  @media (min-width: 688px) {
+    margin: 20px 0 40px;
+  }
+}
