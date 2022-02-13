@@ -1,6 +1,11 @@
+import { CgChevronLeftR } from "react-icons/cg";
 import "./modal.scss";
 
-const Modal = ({ selectedPokemon }) => {
+const Modal = ({ selectedPokemon, setShowModal }) => {
+  const handleClickCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <section className="modal">
       <div className="modal__container">
@@ -36,6 +41,10 @@ const Modal = ({ selectedPokemon }) => {
               </div>
             );
           })}
+          <CgChevronLeftR
+            onClick={handleClickCloseModal}
+            className="modal__close"
+          />
         </section>
       </div>
     </section>

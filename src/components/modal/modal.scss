@@ -95,4 +95,17 @@
       background-color: #000;
     }
   }
+
+  &__close {
+    font-size: 45px;
+    margin-top: 80px;
+    transition: color 1s ease-in-out;
+    cursor: pointer;
+
+    @media (min-width: 688px) {
+      &:hover {
+        color: #fb1b1b;
+      }
+    }
+  }
 }

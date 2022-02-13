@@ -31,7 +31,9 @@ const App = () => {
           />
         </>
       )}
-      {showModal && <Modal selectedPokemon={selectedPokemon} />}
+      {showModal && (
+        <Modal selectedPokemon={selectedPokemon} setShowModal={setShowModal} />
+      )}
     </>
   );
 };
