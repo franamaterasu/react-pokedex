@@ -1,11 +1,13 @@
+@import '../../scss/app.scss';
+
 .pagination {
   text-align: center;
 
   &__button {
-    background-color: #000;
+    background-color: $black;
     border: none;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
+    color: $white;
+    font-family: $default-font;
     font-size: 18px;
     padding: 7px 15px;
     border-radius: 10px;

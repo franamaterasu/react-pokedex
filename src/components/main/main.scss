@@ -1,6 +1,8 @@
+@import '../../scss/app.scss';
+
 .main-container {
   align-items: center;
-  background-color: #fff;
+  background-color: $white;
   box-sizing: border-box;
   display: flex;
   height: 75vh;

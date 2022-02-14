@@ -1,5 +1,7 @@
+@import '../../scss/app.scss';
+
 .header {
-  background-color: #fb1b1b;
+  background-color: $red;
   padding: 15px 50px;
   display: flex;
   align-items: center;
@@ -8,13 +10,13 @@
   justify-content: space-between;
 
   &__logo {
-    font-family: 'Bebas Neue', cursive;
-    color: #fff;
+    font-family: $secondary-font;
+    color: $white;
     font-size: 39px;
   }
 
   &__counter {
-    background-color: #fff;
+    background-color: $white;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -27,7 +29,7 @@
   }
 
   &__counter-number {
-    font-family: 'Lato', sans-serif;
+    font-family: $default-font;
     font-weight: 300;
   }
 }
