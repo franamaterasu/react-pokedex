@@ -48,8 +48,12 @@ const Card = ({
             #{item.order} <span className="card__text--bold">{item.name}</span>
           </p>
           <ul className="card__list">
-            {item.types.map((type) => {
-              return <li className="card__list-item">{type.type.name}</li>;
+            {item.types.map((type, index) => {
+              return (
+                <li key={index} className="card__list-item">
+                  {type.type.name}
+                </li>
+              );
             })}
           </ul>
         </div>

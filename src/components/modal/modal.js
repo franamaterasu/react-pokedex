@@ -25,18 +25,18 @@ const Modal = ({ selectedPokemon, setShowModal, huntedList }) => {
           </p>
           <p className="modal__section-title">Habilidades:</p>
           <ul className="modal__section-list">
-            {selectedPokemon.abilities.map((habilidad) => {
+            {selectedPokemon.abilities.map((habilidad, index) => {
               return (
-                <li className="modal__section-list-item">
+                <li key={index} className="modal__section-list-item">
                   {habilidad.ability.name}
                 </li>
               );
             })}
           </ul>
           <p className="modal__section-title">Estadísticas</p>
-          {selectedPokemon.stats.map((stat) => {
+          {selectedPokemon.stats.map((stat, index) => {
             return (
-              <div className="modal__stat">
+              <div key={index} className="modal__stat">
                 <span className="modal__stat-name">{stat.stat.name}</span>
                 <span className="modal__stat-number">{stat.base_stat}</span>
                 <div className="modal__stat-bar-container">
