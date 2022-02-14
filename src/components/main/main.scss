@@ -8,7 +8,7 @@
   max-width: 100%;
   overflow-x: scroll;
 
-  @media (min-width: 688px) {
+  @media (min-width: $x-small) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -17,15 +17,15 @@
     max-width: auto;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $small) {
   grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: $middle) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $big) {
     grid-template-columns: repeat(5, 1fr);
   }
 }

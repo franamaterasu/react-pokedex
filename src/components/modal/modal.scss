@@ -108,7 +108,7 @@
     transition: color 1s ease-in-out;
     cursor: pointer;
 
-    @media (min-width: 688px) {
+    @media (min-width: $x-small) {
       &:hover {
         color: $red;
       }
