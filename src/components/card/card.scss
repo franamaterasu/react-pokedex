@@ -1,34 +1,34 @@
 @import '../../scss/app.scss';
 
 .card {
-  width: 100%;
   flex: none;
-  text-align: center;
   position: relative;
+  text-align: center;
+  width: 100%;
 
   &:last-of-type {
     margin-right: 0;
   }
 
   &__container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 40px 15px;
-    box-sizing: border-box;
-    background-color: #f0f0f0;
+    background-color: $white-two;
     border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
     max-width: 360px;
+    padding: 40px 15px;
     transition: background-color .5s ease-in-out;
+    width: 90%;
 
     &:hover {
-      background-color: darken(#f0f0f0, 20%);
+      background-color: darken($white-two, 20%);
     }
 
     @media (min-width: $x-small) {
-      width: 100%;
-      max-width: none;
       background-color: transparent;
+      max-width: none;
       transition: box-shadow .5s ease-in-out;
+      width: 100%;
 
       &:hover {
         background-color: transparent;
@@ -39,17 +39,17 @@
         }
 
         .card__nav {
-          opacity: 1;
           bottom: 135px;
+          opacity: 1;
         }
       }
     }
   }
   
   &__image {
-    max-width: 80%;
     height: auto;
     margin: 0 auto 20px;
+    max-width: 80%;
     transition: all 1s ease-in-out;
   }
 
@@ -57,21 +57,21 @@
     margin-bottom: 20px;
 
     @media (min-width: $x-small) {
-      opacity: 0;
-      position: absolute;
-      width: 100%;
+      bottom: 95px;
       left: 0;
       margin: 0;
-      bottom: 95px;
+      opacity: 0;
+      position: absolute;
       transition: all 1s ease-in-out;
+      width: 100%;
     }
   }
 
   &__button {
-    border: none;
-    outline: 0;
-    font-size: 40px;
     background-color: transparent;
+    border: none;
+    font-size: 40px;
+    outline: 0;
 
     &:hover {
       cursor: pointer;
@@ -89,9 +89,9 @@
   &__text {
     color: $black;
     font-family: $default-font;
+    font-size: 22px;
     font-weight: 300;
     line-height: 0;
-    font-size: 22px;
     text-transform: capitalize;
     
     &--bold {
@@ -101,17 +101,17 @@
 
   &__list {
     @include flex($justify-content: center);
-    margin-top: 30px;
     gap: 10px;
+    margin-top: 30px;
   }
 
   &__list-item {
     background-color: $red;
+    border-radius: 8px;
     color: $white;
     font-family: $default-font;
     font-weight: 300;
-    padding: 15px 15px;
-    border-radius: 8px;
     line-height: 0;
+    padding: 15px 15px;
   }
 }

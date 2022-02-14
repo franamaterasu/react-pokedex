@@ -2,13 +2,13 @@
 
 .loader {
   @include flex($justify-content: center);
-  height: 100vh; 
   flex-direction: column;
+  height: 100vh; 
 
   &__image {
-    width: 180px;
-    margin: 0 auto;
     animation: rotate 1s linear infinite;
+    margin: 0 auto;
+    width: 180px;
   }
 }
 

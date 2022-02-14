@@ -10,11 +10,11 @@
 
   @media (min-width: $x-small) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
     height: auto;
-    padding: 20px 50px;
     max-width: auto;
+    padding: 20px 50px;
   }
 
   @media (min-width: $small) {

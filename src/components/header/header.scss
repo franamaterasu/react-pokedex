@@ -3,13 +3,13 @@
 .header {
   @include flex($justify-content: space-between);
   background-color: $red;
+  box-sizing: border-box;
   padding: 15px 50px;
   width: 100%;
-  box-sizing: border-box;
 
   &__logo {
-    font-family: $secondary-font;
     color: $white;
+    font-family: $secondary-font;
     font-size: 39px;
   }
 
