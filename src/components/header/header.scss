@@ -1,13 +1,11 @@
 @import '../../scss/app.scss';
 
 .header {
+  @include flex($justify-content: space-between);
   background-color: $red;
   padding: 15px 50px;
-  display: flex;
-  align-items: center;
   width: 100%;
   box-sizing: border-box;
-  justify-content: space-between;
 
   &__logo {
     font-family: $secondary-font;
@@ -16,9 +14,8 @@
   }
 
   &__counter {
+    @include flex();
     background-color: $white;
-    display: flex;
-    align-items: center;
     border-radius: 10px;
     padding: 3px 25px;
   }

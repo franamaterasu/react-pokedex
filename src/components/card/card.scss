@@ -100,8 +100,7 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: center;
+    @include flex($justify-content: center);
     margin-top: 30px;
     gap: 10px;
   }

@@ -9,10 +9,8 @@
   background-color: $white;
 
   &__container {
+    @include flex($align-items: center, $justify-content: center);
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
   }
@@ -23,6 +21,7 @@
   }
 
   &__name {
+    @include flex($justify-content: center);
     color: $black;
     font-family: 'Lato',
     sans-serif;
@@ -32,8 +31,6 @@
     text-transform: capitalize;
     font-weight: 700;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
   }
 
   &__name-icon {
@@ -55,8 +52,7 @@
   }
 
   &__section-list {
-    display: flex;
-    justify-content: center;
+    @include flex($justify-content: center);
     gap: 10px;
     margin-bottom: 30px;
   }
@@ -73,8 +69,7 @@
   }
 
   &__stat {
-    display: flex;
-    align-items: center;
+    @include flex($align-items: center);
     font-family: $default-font;
     font-weight: 300;
     margin-bottom: 10px;
