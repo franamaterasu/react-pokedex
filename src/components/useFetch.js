@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useFetch = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -6,17 +7,16 @@ const useFetch = () => {
   let pokemonList = [];
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=10`)
-      .then((response) => response.json())
-      .then((data) => {
-        data.results.map((item) => {
-          fetch(item.url)
-            .then((response) => response.json())
-            .then((data) => {
-              pokemonList.push([data]);
-            });
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=10`)
+      .then(function (response) {
+        response.data.results.map((item) => {
+          axios.get(item.url).then(function (response) {
+            pokemonList.push([response.data]);
+          });
         });
       });
+
     setTimeout(() => {
       setPokemons(pokemonList);
     }, 2000);
